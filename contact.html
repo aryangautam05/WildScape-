@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WildScape - Contact Us</title>
+<meta name="description" content="Contact WildScape for expert advice and support on smart irrigation and eco-friendly garden solutions. Connect with us to elevate your garden." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-green: #2d7a2d;
+    --color-aqua: #37c8d7;
+    --color-aqua-light: #b3ebf2;
+    --color-gray-dark: #374151;
+    --color-gray: #6b7280;
+    --color-gray-light: #e5e7eb;
+    --color-white: #ffffff;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+    --max-content-width: 1200px;
+    --spacing-base: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --header-height: 64px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gray-dark);
+    background: #f8faf9;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--color-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-green);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-green);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.3;
+  }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; margin-bottom: 1rem; }
+  h3 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  p {
+    margin-top: 0; margin-bottom: var(--spacing-base);
+    color: var(--color-gray);
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+    padding-left: 1.5rem;
+  }
+  button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+  }
+  .container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    width: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-green);
+    user-select: none;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  nav a {
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+  }
+  nav a:hover, nav a:focus {
+    background: var(--color-aqua-light);
+    color: var(--color-green);
+  }
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: var(--color-green);
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  }
+  .mobile-nav.show {
+    display: flex;
+  }
+  .mobile-nav a {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  .hero {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--color-aqua-light), var(--color-green));
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin: 0 auto var(--spacing-xl);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-green);
+    background: var(--color-white);
+    padding: 14px 40px;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    outline: none;
+  }
+  @keyframes water-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+  .water-flow-bg {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40px;
+    background: linear-gradient(90deg, #26becf 0%, #70e3ff 50%, #26becf 100%);
+    background-size: 200% 100%;
+    animation: water-flow 3s linear infinite;
+    opacity: 0.4;
+  }
+  section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+  .card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: var(--spacing-lg);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-green);
+  }
+  .card p {
+    color: var(--color-gray);
+    margin-bottom: 1em;
+  }
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  label {
+    font-weight: 600;
+    color: var(--color-green);
+  }
+  input[type="text"], input[type="email"], textarea {
+    font-family: var(--font-sans);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gray-light);
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--color-aqua);
+    outline: none;
+  }
+  textarea {
+    min-height: 150px;
+  }
+  button[type="submit"] {
+    background: var(--color-green);
+    color: var(--color-white);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover, button[type="submit"]:focus {
+    background: #206920;
+    outline: none;
+  }
+  .disclaimer {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    background: var(--color-gray-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-base);
+    margin-top: var(--spacing-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  footer {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-slogan {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: var(--spacing-base);
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+  }
+  @media (max-width: 767px) {
+    nav.nav-desktop { display: none; }
+    .mobile-menu-button { display: block; }
+  }
+</style>
+</head>
+<body>
+<header aria-label="Primary Navigation">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" tabindex="0">WildScape</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">&#xe5d2;</button>
+    <nav role="navigation" aria-label="Main navigation" class="nav-desktop">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="banner" aria-label="WildScape Contact Banner">
+    <div class="container">
+      <h1>Contact WildScape</h1>
+      <p>We're eager to assist you with your smart irrigation and eco-friendly garden needs. Reach out to us anytime for consultations, support, or queries about our services.</p>
+      <button class="btn-primary" onclick="document.getElementById('contact-info').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to contact form">Contact Us Now</button>
+      <div class="water-flow-bg" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="contact-info" class="container" aria-labelledby="contact-info-heading">
+    <div class="section-header">
+      <h2 id="contact-info-heading">Contact Information</h2>
+      <p>We are available via multiple channels to answer your questions or provide assistance. Use the form or details below to reach us.</p>
+    </div>
+    <div class="contact-info card">
+      <h3>Address</h3>
+      <p>44 W 4th St, New York, NY 10012, USA</p>
+
+      <h3>Phone</h3>
+      <p>+1 (555) 123-4567</p>
+
+      <h3>Email</h3>
+      <p>contact@wildscape.com</p>
+
+      <h3>Customer Support</h3>
+      <p>Our support team is available Monday to Friday from 9 AM to 6 PM EST to assist you with inquiries, troubleshooting, and scheduling appointments. We prioritize prompt, thorough responses to ensure your satisfaction and confidence in our services. Whether you need technical help or advice on garden optimization, our knowledgeable staff are ready to assist.</p>
+
+      <h3>Business Hours</h3>
+      <p>Monday - Friday: 8:30 AM - 7:00 PM</p>
+      <p>Saturday: 9:00 AM - 5:00 PM</p>
+      <p>Sunday: Closed</p>
+
+      <h3>Social Media</h3>
+      <p>Follow us for latest updates, tips, and inspiration:</p>
+      <ul>
+        <li><a href="#" aria-label="WildScape Facebook">Facebook</a></li>
+        <li><a href="#" aria-label="WildScape Twitter">Twitter</a></li>
+        <li><a href="#" aria-label="WildScape LinkedIn">LinkedIn</a></li>
+        <li><a href="#" aria-label="WildScape Instagram">Instagram</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact-form-section" class="container" aria-labelledby="form-heading">
+    <div class="section-header">
+      <h2 id="form-heading">Send Us a Message</h2>
+      <p>Have questions or want to schedule a consultation? Fill out the form below and we will get back to you promptly.</p>
+    </div>
+    <form aria-label="Contact form" id="contact-form">
+      <label for="contact-name">Full Name</label>
+      <input type="text" id="contact-name" name="contact-name" placeholder="Your full name" required />
+
+      <label for="contact-email">Email Address</label>
+      <input type="email" id="contact-email" name="contact-email" placeholder="Your email address" required />
+
+      <label for="contact-phone">Phone Number</label>
+      <input type="text" id="contact-phone" name="contact-phone" placeholder="Phone number (optional)" />
+
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" name="contact-message" placeholder="Type your message here..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="faq" class="container" aria-labelledby="faq-heading">
+    <div class="section-header">
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <p>Answers to common questions to help you learn more about our services and policies.</p>
+    </div>
+    <div class="card">
+      <h3>What areas do you serve?</h3>
+      <p>We primarily serve the New York City metropolitan area but offer consultation and remote support for select nearby regions. Contact us to check availability in your location.</p>
+      <h3>How can I schedule a garden consultation?</h3>
+      <p>You can schedule consultations by filling the contact form or calling our office during business hours. We will arrange a site visit at a convenient time.</p>
+      <h3>What smart irrigation systems do you install?</h3>
+      <p>We install customized drip and sprinkler systems with integrated soil moisture sensors and smart controllers compatible with mobile apps for real-time monitoring.</p>
+      <h3>Can I upgrade my existing irrigation system?</h3>
+      <p>Yes, we offer retrofit services to upgrade traditional irrigation systems to smart, water-efficient technology tailored to your garden.</p>
+      <h3>Do you offer maintenance services?</h3>
+      <p>Our maintenance packages include seasonal check-ups, system calibration, repairs, and support services to keep your garden’s irrigation optimal.</p>
+      <h3>What makes a garden eco-friendly?</h3>
+      <p>Using native plants, organic soil amendments, sustainable watering, and promoting biodiversity characterize an eco-friendly garden.</p>
+      <h3>How long does installation take?</h3>
+      <p>Installation timelines vary based on garden size and complexity but typically range from 1 to 5 days including setup and initial monitoring calibration.</p>
+      <h3>Are your services covered by warranty?</h3>
+      <p>Yes, we provide warranties on installation workmanship and equipment as stated in service agreements.</p>
+      <h3>How do I monitor my irrigation system remotely?</h3>
+      <p>Our systems feature app integration that provides alerts, watering schedules, and control from your smartphone or desktop.</p>
+      <h3>What if I have an emergency with my irrigation system?</h3>
+      <p>Contact our support line immediately. We provide emergency repair services to prevent water damage or prolonged outages.</p>
+    </div>
+  </section>
+
+  <section id="disclaimer" class="container" aria-labelledby="disclaimer-heading">
+    <div class="section-header">
+      <h2 id="disclaimer-heading">Disclaimer</h2>
+    </div>
+    <p class="disclaimer">WildScape provides educational content and professional services focused on sustainable gardening and smart irrigation. While we make every effort to deliver accurate information and high-quality service, results depend on site-specific factors and compliance with guidelines. We disclaim liability for damages resulting from misuse or unforeseen conditions. Please consult licensed professionals for specialized advice.</p>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" aria-label="Website contact and address information">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-slogan" tabindex="0">Increase Content Customer Satisfaction</div>
+      <address class="footer-contact" tabindex="0">
+        44 W 4th St, New York, NY 10012, USA<br />
+        Phone: +1 (555) 123-4567<br />
+        Email: contact@wildscape.com
+      </address>
+    </div>
+    <div class="footer-bottom" tabindex="0">&copy; 2024 WildScape. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.tabIndex = expanded ? -1 : 0;
+    });
+  });
+  document.getElementById('contact-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert("Thank you for reaching out! We have received your message and will respond as soon as possible.");
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
