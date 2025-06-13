@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WildScape - Cookies Policy</title>
+<meta name="description" content="Comprehensive WildScape cookies policy detailing cookie usage, management, and your rights concerning cookies when using our website." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-green: #2d7a2d;
+    --color-aqua: #37c8d7;
+    --color-aqua-light: #b3ebf2;
+    --color-gray-dark: #374151;
+    --color-gray: #6b7280;
+    --color-gray-light: #e5e7eb;
+    --color-white: #ffffff;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+    --max-content-width: 1200px;
+    --spacing-base: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --header-height: 64px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gray-dark);
+    background: #f8faf9;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--color-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-green);
+    outline: none;
+  }
+  h1, h2, h3 {
+    color: var(--color-green);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.3;
+  }
+  h1 { font-size: 3rem; margin-bottom: 24px; }
+  h2 { font-size: 2rem; margin-bottom: 24px; }
+  h3 { font-size: 1.5rem; margin-bottom: 16px; }
+  p {
+    margin-top: 0; margin-bottom: 20px;
+    color: var(--color-gray);
+  }
+  .container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    width: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-green);
+    user-select: none;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  nav a {
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+  }
+  nav a:hover, nav a:focus {
+    background: var(--color-aqua-light);
+    color: var(--color-green);
+  }
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: var(--color-green);
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  }
+  .mobile-nav.show {
+    display: flex;
+  }
+  .mobile-nav a {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 767px) {
+    nav.nav-desktop { display: none; }
+    .mobile-menu-button { display: block; }
+  }
+  section {
+    padding: var(--spacing-xl) var(--spacing-base);
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+  }
+  footer {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-slogan {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: var(--spacing-base);
+  }
+  #cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-aqua);
+    color: var(--color-gray-dark);
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1100;
+    flex-wrap: wrap;
+  }
+  #cookie-consent p {
+    margin: 0 1rem 0 0;
+    flex: 1 1 70%;
+  }
+  #cookie-buttons button {
+    background: var(--color-green);
+    border: none;
+    color: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: background-color 0.3s ease;
+  }
+  #cookie-buttons button:hover, #cookie-buttons button:focus {
+    background-color: #1f5b1f;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+<header aria-label="Primary Navigation">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" tabindex="0">WildScape</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">&#xe5d2;</button>
+    <nav role="navigation" aria-label="Main navigation" class="nav-desktop">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+<main>
+<section class="hero" role="banner" aria-label="Cookies Policy Banner">
+  <div class="container">
+    <h1>Cookies Policy</h1>
+    <p>Welcome to WildScape’s Cookies Policy. We use cookies to enhance your experience, analyze traffic, and provide personalized services. Below are detailed explanations about all cookie-related aspects to help you understand how we manage and use this technology.</p>
+  </div>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-1">
+  <h2 id="cookie-topic-1">1. What Are Cookies?</h2>
+  <p>Cookies are small files stored on your device by websites you visit. They carry information that helps sites remember your preferences, login status, and browsing behavior, enabling a better and more personalized experience. Cookies may be session-based or persistent, cleaning up after browsing or staying available for repeated visits.</p>
+  <p>They generally contain identifiers, timestamps, and other metadata to track interactions with the site, facilitating smooth functionality such as shopping carts, language settings, or authentication. Cookies are widely used across the internet by nearly all websites for various purposes, both essential and analytical. They contribute significantly to usability and user experience.</p>
+  <p>Without cookies, websites would not remember your activity, requiring repeated re-inputs and offering limited customization. They are a cornerstone of personalized digital services, but also require transparent management to respect user privacy.</p>
+  <p>Cookies can be managed via browser settings, allowing users to block, delete, or restrict cookie use entirely, though this may affect website performance and features. WildScape’s implementation complies with regulations to safeguard your rights and offer control over cookie use.</p>
+  <p>We inform visitors using this policy and our cookie banner to ensure clear, upfront disclosure as part of ethical data practices. Cookies are not malicious; they are functional tools whose use must be responsible and respectful of privacy.</p>
+  <p>Our goal is to leverage cookies to enhance service quality without compromising your privacy or security. Understanding cookies empowers you to make informed choices about your online presence.</p>
+  <p>Various types of cookies are utilized for different functions — from essential to marketing — each with varying privacy implications. Education about these types enables smarter consent and controls.</p>
+  <p>Devices and browsers differ in how cookies are stored and managed, necessitating adaptive policies and technical solutions from providers like WildScape.</p>
+  <p>Please consult our detailed cookie categories below for specific descriptions and purposes assigned to each.</p>
+  <p>By continuing to use our site, you agree to our use of cookies within the consent you provide, respecting your autonomy and data preferences.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-2">
+  <h2 id="cookie-topic-2">2. Types of Cookies We Use</h2>
+  <p>WildScape uses several types of cookies, each serving specific purposes to optimize user experience while respecting privacy:</p>
+  <p><strong>Essential Cookies:</strong> These cookies are critical to enable basic website functions such as page navigation, login sessions, and security features. Without essential cookies, the website cannot operate properly.</p>
+  <p><strong>Performance Cookies:</strong> These collect anonymous information on how visitors use our site, such as pages visited and error messages. They help us optimize performance and understand user behavior to make improvements.</p>
+  <p><strong>Functional Cookies:</strong> Functional cookies remember choices you make (such as language or region) to provide enhanced features and personalized interactions during your session or future visits.</p>
+  <p><strong>Targeting or Advertising Cookies:</strong> Used to deliver ads relevant to your interests based on your browsing behavior and demographics. They limit ad frequency and measure campaign effectiveness but require your explicit consent.</p>
+  <p><strong>Third-Party Cookies:</strong> These are set by partners or analytics providers like Google Analytics for marketing, performance, and functionality. They operate under their privacy terms but are used in conjunction with WildScape’s services.</p>
+  <p>We classify cookies clearly in our cookie banner, offering choices to accept, reject, or customize preferences according to categories.</p>
+  <p>Understanding these categories helps you control how much data you share while benefiting from a tailored browsing experience.</p>
+  <p>Cookies on WildScape comply with regional regulations such as GDPR or CCPA, incorporating user consent and transparency.</p>
+  <p>Different cookies have distinct lifespans, some persisting for months, others only for your current session.</p>
+  <p>We regularly review and audit cookie usage to maintain compliance and uphold best privacy practices tailored to emerging standards and technologies.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-3">
+  <h2 id="cookie-topic-3">3. How We Use Cookies</h2>
+  <p>Cookies collected serve varied but interrelated functions to support and improve service delivery:</p>
+  <p><strong>Site Functionality:</strong> Ensure secure login, navigation, and access to personalized sections.</p>
+  <p><strong>Usage Analysis:</strong> Understand visitors’ flow through our site to refine content layout and offerings effectively.</p>
+  <p><strong>Preference Management:</strong> Store language and theme choices for consistent user experiences.</p>
+  <p><strong>Security:</strong> Detect fraudulent or abusive activities safeguarding user data and service integrity.</p>
+  <p><strong>Targeted Advertising:</strong> Help display advertisements aligned with your interests while respecting frequency limits.</p>
+  <p><strong>Customer Support:</strong> Customize assistance based on prior interactions improving satisfaction.</p>
+  <p><strong>Regulatory Compliance:</strong> Maintain records of user consent and preferences to meet legal standards.</p>
+  <p><strong>Performance Monitoring:</strong> Detect and resolve technical issues swiftly minimizing downtimes.</p>
+  <p><strong>Personalization:</strong> Tailor content recommendations and notifications enhancing value and engagement.</p>
+  <p><strong>Interaction Tracking:</strong> Track clicks and session data to measure service and campaign success.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-4">
+  <h2 id="cookie-topic-4">4. Managing and Disabling Cookies</h2>
+  <p>You have control over your cookie preferences and can modify or decline cookies if desired.</p>
+  <p>Most web browsers allow you to refuse or delete cookies via their settings by disabling them or clearing their storage.</p>
+  <p>Specific instructions vary by browser but generally can be found under privacy or security settings menus.</p>
+  <p>Blocking cookies may limit certain website features, impact your login state, and degrade personalized services.</p>
+  <p>WildScape provides consent controls to enable you to accept all, reject all, or customize cookie settings for essential or optional cookies.</p>
+  <p>Adjustments to cookie settings can be made anytime through our cookie consent banner or your browser preferences.</p>
+  <p>Disabling third-party cookies can reduce behavioral advertising but will not affect essential site functions.</p>
+  <p>Some cookies essential to security and transactions cannot be disabled without limiting service functionality.</p>
+  <p>We encourage regular review of cookie and privacy settings as browser and policy updates may affect available options.</p>
+  <p>Our cookie policy page and FAQ provide continuous guidance on managing cookies responsibly.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-5">
+  <h2 id="cookie-topic-5">5. Cookies and Your Privacy Rights</h2>
+  <p>Your consent and rights concerning cookies are protected under global privacy frameworks including GDPR, CCPA, and others.</p>
+  <p>You may withdraw consent at any time without affecting the lawfulness of processing prior to withdrawal.</p>
+  <p>Upon withdrawal, WildScape will cease use of non-essential cookies unless required by law or for security.</p>
+  <p>You can request detailed information about cookies in use and data collected through our contact channels.</p>
+  <p>Your rights to access, rectify, erase, restrict processing, data portability, and objection also apply to data collected via cookies.</p>
+  <p>We implement processes to observe and respect these rights, including cookie preferences and consent records.</p>
+  <p>Automated tracking or profiling from cookies is transparently disclosed and subjected to your control.</p>
+  <p>Cookies associated with children’s data are restricted rigorously and comply with applicable child privacy laws.</p>
+  <p>We do not use cookies to collect sensitive personal data unless explicitly consented by you.</p>
+  <p>WildScape remains committed to safeguarding user privacy and empowering controls over data collection.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-6">
+  <h2 id="cookie-topic-6">6. Third-Party Cookies and Partners</h2>
+  <p>Third-party cookies are placed by services distinct from WildScape involved in analytics, advertising, or functionality enhancement.</p>
+  <p>Such entities operate independently under their privacy policies; we encourage review of third-party cookie policies for transparency about data use.</p>
+  <p>We share minimal necessary information with trusted partners who adhere to data protection commitments consistent with our privacy values.</p>
+  <p>Cookies from third parties may include tracking for advertisements shown across platforms to improve relevancy and reduce repetitive ads.</p>
+  <p>You may block third-party cookies through browser controls or manage permissions on those third-party platforms.</p>
+  <p>While WildScape cannot control these cookies, we choose partners carefully to maintain strong privacy assurances.</p>
+  <p>Continuation of service access includes acceptance of third-party cookie use permissible through your consent choices.</p>
+  <p>We rigorously monitor partner compliance and update practices to reflect evolving legal standards.</p>
+  <p>Partner cookies improve analytics accuracy allowing us to fine-tune services and user experience.</p>
+  <p>Direct questions about third-party cookie practices should be addressed to those service providers.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-7">
+  <h2 id="cookie-topic-7">7. Cookie Duration and Expiration</h2>
+  <p>We use both session cookies, which expire when you close your browser, and persistent cookies, which stay until a set expiry or cleanup.</p>
+  <p>Essential session cookies protect login states and temporary preferences during your active visit.</p>
+  <p>Persistent cookies allow us to remember your settings and preferences for future visits, enhancing your convenience.</p>
+  <p>Expiration periods vary by cookie type: marketing cookies may last months, while analytics cookies have shorter lifetimes.</p>
+  <p>You can view and manage cookies stored on your browser including their expiration dates through settings or developer tools.</p>
+  <p>Periodic clearing of cookies is recommended for security and privacy hygiene but must be balanced with usability impacts.</p>
+  <p>Cookie expiration policies comply with legal requirements and best industry practices.</p>
+  <p>WildScape periodically reviews cookie lifespans to optimize between functionality and privacy.</p>
+  <p>Users have full power to delete persistent cookies independently at any time.</p>
+  <p>Understanding cookie durations helps manage expectations about data retention and website behavior.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-8">
+  <h2 id="cookie-topic-8">8. Browser Settings and Tools</h2>
+  <p>You have comprehensive control over how cookies are handled through your browser or device settings.</p>
+  <p>Most popular browsers provide options to accept, reject, delete, or restrict cookies on a per-site or global basis.</p>
+  <p>Instructions differ by browser but typically reside under privacy or security menu sections.</p>
+  <p>Some advanced users employ extensions or privacy tools to manage cookies routinely and block trackers.</p>
+  <p>Enabling ‘Do Not Track’ signals your preference not to be tracked; however, not all websites honor this setting.</p>
+  <p>Adjusting cookie consent on WildScape can be done via the cookie banner or page preferences at any visit.</p>
+  <p>Clearing cookies may require you to log back in or reconfigure preferences on some websites.</p>
+  <p>Awareness of your browser capabilities enhances privacy management and online safety.</p>
+  <p>New browser developments continue to improve user control over tracking and data sharing.</p>
+  <p>We encourage all users to regularly review their cookie and privacy settings to stay secure.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-9">
+  <h2 id="cookie-topic-9">9. Impact of Disabling Cookies</h2>
+  <p>Disabling cookies can enhance privacy but may degrade website functionality or prevent access to certain features.</p>
+  <p>Login persistence, personalized content, multi-step forms, and shopping cart retention often rely heavily on cookies.</p>
+  <p>With cookies off, you may encounter repeated login prompts or loss of customization on revisit.</p>
+  <p>Some visual elements and interactive widgets may not function correctly without accepted cookies.</p>
+  <p>WildScape strives to balance privacy and usability by limiting essential cookie use and transparent consent.</p>
+  <p>You can still browse basic informational sections without cookies, but dynamic services may be reduced.</p>
+  <p>We will not limit access arbitrarily but some personalized offerings depend on cookie consent.</p>
+  <p>Regular updates to site design aim to minimize disruptions for users with limited cookie acceptance.</p>
+  <p>Clear guidance is provided on how to adjust cookies to regain full service functionality.</p>
+  <p>Your privacy preferences remain our utmost priority regardless of cookie choices.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-10">
+  <h2 id="cookie-topic-10">10. Cookies and Children’s Privacy</h2>
+  <p>WildScape does not knowingly collect personal data from children under 16 through cookies or other means without parental consent.</p>
+  <p>Our services are intended for adult users, and we encourage parents to supervise browsing activities of minors.</p>
+  <p>We implement measures to avoid serving targeted cookies to underage users.</p>
+  <p>If you believe we inadvertently collected data from a child, please contact us immediately to request data removal.</p>
+  <p>Compliant with the Children’s Online Privacy Protection Act (COPPA) and other relevant regulations, WildScape protects minors’ data with special care.</p>
+  <p>We do not employ behavioral advertising targeting children or profile their data using cookies.</p>
+  <p>Any cookie-based tracking on sites rendered suitable for children is strictly regulated and minimized.</p>
+  <p>Parental controls and settings remain primary for managing children’s exposure to cookies and tracking online.</p>
+  <p>WildScape monitors and updates children-related privacy protections as laws evolve globally.</p>
+  <p>We encourage awareness and responsible digital habits to safeguard children’s online privacy.</p>
+</section>
+
+<section class="container" aria-labelledby="cookie-topic-11">
+  <h2 id="cookie-topic-11">11. Cookie Consent and Law Compliance</h2>
+  <p>WildScape actively complies with international privacy laws and cookie directives such as GDPR and ePrivacy regulations.</p>
+  <p>Our cookie consent banner obtains explicit user consent before placing non-essential cookies.</p>
+  <p>The banner provides clear options to accept, decline, or customize cookie preferences for full transparency.</p>
+  <p>We maintain records of all cookie consent transactions for audit and compliance purposes.</p>
+  <p>Users can withdraw or modify consent at any time by interacting with cookie settings.</p>
+  <p>Our cookie policy and user permissions reflect best practices and legal requirements wherever users access our services.</p>
+  <p>We engage professionals to guide regulatory adherence and update mechanisms promptly.</p>
+  <p>Compliance safeguards your privacy and builds trust essential for ongoing service relationships.</p>
+  <p>Information about legal obligations related to cookies is made accessible and understandable.</p>
+  <p>We encourage users to read these policies thoroughly to understand their rights and options fully.</p>
+</section>
+
+<!-- Additional topics would continue similarly... -->
+</main>
+<footer role="contentinfo" aria-label="Website footer with contact and legal information">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-slogan" tabindex="0">Committed to Your Privacy & Satisfaction</div>
+      <address class="footer-contact" tabindex="0">
+        44 W 4th St, New York, NY 10012, USA<br />
+        Phone: +1 (555) 123-4567<br />
+        Email: privacy@wildscape.com
+      </address>
+    </div>
+    <div class="footer-bottom" tabindex="0">
+      &copy; 2024 WildScape. All rights reserved. | <a href="privacy.html" style="color: #ade8f4;">Privacy Policy</a> | <a href="contact.html" style="color: #ade8f4;">Contact Us</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent banner">
+  <p>We use cookies to enhance your experience and analyze site usage. By continuing, you agree to our use of cookies.</p>
+  <div id="cookie-buttons">
+    <button id="accept-cookies" aria-label="Accept cookies">Accept</button>
+    <button id="decline-cookies" aria-label="Decline cookies">Decline</button>
+  </div>
+</div>
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.tabIndex = expanded ? -1 : 0;
+    });
+  });
+
+  // Cookie consent logic
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+
+  const cookieKey = 'wildscape_cookie_consent';
+
+  function saveConsent(consent) {
+    localStorage.setItem(cookieKey, consent);
+  }
+
+  function getConsent() {
+    return localStorage.getItem(cookieKey);
+  }
+
+  function hideConsent() {
+    cookieConsent.style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const consent = getConsent();
+    if (!consent) {
+      cookieConsent.style.display = 'flex';
+    } else {
+      hideConsent();
+    }
+  });
+
+  acceptBtn.addEventListener('click', () => {
+    saveConsent('accepted');
+    hideConsent();
+  });
+
+  declineBtn.addEventListener('click', () => {
+    saveConsent('declined');
+    hideConsent();
+  });
+</script>
+</body>
+</html>
