@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WildScape - Privacy Policy</title>
+<meta name="description" content="Read WildScape's comprehensive privacy policy explaining how we collect, use, and protect your data. Your privacy and trust are our top priorities." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-green: #2d7a2d;
+    --color-aqua: #37c8d7;
+    --color-aqua-light: #b3ebf2;
+    --color-gray-dark: #374151;
+    --color-gray: #6b7280;
+    --color-gray-light: #e5e7eb;
+    --color-white: #ffffff;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+    --max-content-width: 1200px;
+    --spacing-base: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --header-height: 64px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gray-dark);
+    background: #f8faf9;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--color-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-green);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-green);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.3;
+  }
+  h1 { font-size: 3rem; margin-bottom: 24px; }
+  h2 { font-size: 2.25rem; margin-bottom: 24px; }
+  h3 { font-size: 1.75rem; margin-bottom: 16px; }
+  p {
+    margin-top: 0; margin-bottom: 20px;
+    color: var(--color-gray);
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 1.5rem;
+  }
+  button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+  }
+  .container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    width: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-green);
+    user-select: none;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  nav a {
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+  }
+  nav a:hover, nav a:focus {
+    background: var(--color-aqua-light);
+    color: var(--color-green);
+  }
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: var(--color-green);
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  }
+  .mobile-nav.show {
+    display: flex;
+  }
+  .mobile-nav a {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 767px) {
+    nav.nav-desktop { display: none; }
+    .mobile-menu-button { display: block; }
+  }
+  footer {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-slogan {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: var(--spacing-base);
+  }
+</style>
+</head>
+<body>
+<header aria-label="Primary Navigation">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" tabindex="0">WildScape</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">&#xe5d2;</button>
+    <nav role="navigation" aria-label="Main navigation" class="nav-desktop">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+<main>
+<section class="hero" role="banner" aria-label="Privacy Policy Banner">
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p>At WildScape, protecting your privacy is a top priority. This comprehensive policy details how we collect, use, and safeguard your data, ensuring transparency and your rights.</p>
+  </div>
+</section>
+
+<section class="container" aria-labelledby="general-info">
+  <h2 id="general-info">General Information</h2>
+  <p>This Privacy Policy governs the manner in which WildScape collects, uses, maintains, and discloses information collected from users of our website and services. We are committed to protecting your personal data and respecting your privacy rights in accordance with applicable laws.</p>
+  <p>By accessing our website or engaging our services, you consent to the data practices described herein. Please read this policy carefully to understand how your information is handled so you can make informed decisions.</p>
+  <p>We collect personal information only when voluntarily submitted by users for specific purposes such as inquiries, service provision, or subscription. Our goal is to collect minimal data strictly necessary for legitimate business operations and customer satisfaction.</p>
+  <p>We uphold stringent security measures to safeguard your data from unauthorized access, alteration, disclosure, or destruction. Data transmitted through our website is encrypted when possible, and stored securely following industry best practices.</p>
+  <p>WildScape reserves the right to modify this Privacy Policy at any time. Updates will be posted on this page with the date of revision to ensure transparency. Continued use of our site after policy changes constitutes acceptance of updated terms.</p>
+  <p>Your trust is essential, and we strive to be clear and transparent about our practices. If you have questions or concerns, please contact us through the links provided at the bottom of this page.</p>
+  <p>We do not sell your personal information. Data sharing is limited to partners and service providers necessary to provide our services.</p>
+  <p>You have rights to access, correct, or request deletion of your data, subject to legal allowances.</p>
+  <p>This policy reflects our respect for your privacy and commitment to responsible data management.</p>
+  <p>Our team is dedicated to upholding your privacy with utmost diligence and care.</p>
+</section>
+
+<section class="container" aria-labelledby="information-collection">
+  <h2 id="information-collection">Information We Collect</h2>
+  <p>WildScape collects two types of information: personally identifiable information and non-personally identifiable information.</p>
+  <p>Personally identifiable information includes your name, email, phone number, and any other data you provide when contacting us or using our services.</p>
+  <p>Non-personally identifiable information includes browser type, operating system, and web traffic data collected through cookies or similar technologies to improve service and website experience.</p>
+  <p>We gather information directly when you fill out forms, subscribe to newsletters, or communicate with us via email or phone.</p>
+  <p>Information from third parties or partners may be collected with your consent or as necessary for delivering services.</p>
+  <p>We may also collect location data if you opt-in to location services to provide customized offers or relevant content.</p>
+  <p>All data collection complies with applicable data protection laws and regulations. We do not collect more information than necessary.</p>
+  <p>You can choose not to provide optional information, but some services may be limited.</p>
+  <p>Data retention policies ensure information is stored only as long as needed.</p>
+  <p>We continually review our data collection to minimize impact on your privacy.</p>
+</section>
+
+<section class="container" aria-labelledby="use-of-information">
+  <h2 id="use-of-information">How We Use Your Information</h2>
+  <p>Information collected enables WildScape to provide and improve our services effectively and securely.</p>
+  <p>We respond to inquiries, process transactions, and communicate account or service-update information.</p>
+  <p>Data is also used to personalize your experience, provide offers, and enhance overall user satisfaction.</p>
+  <p>Marketing communications are only sent with your consent, with unsubscribe options provided.</p>
+  <p>Aggregated and anonymized data support site performance analysis and service enhancements.</p>
+  <p>Data sharing with third-party vendors is limited to functions essential for business operations and performed under contractual confidentiality.</p>
+  <p>WildScape uses security measures to prevent data misuse or unauthorized access.</p>
+  <p>We do not use your data for discriminatory purposes and respect your privacy throughout all interactions.</p>
+  <p>Our use of data always aligns with protecting your interests and complying with regulations.</p>
+  <p>We keep our practices transparent to maintain your trust and confidence.</p>
+</section>
+
+<section class="container" aria-labelledby="data-sharing">
+  <h2 id="data-sharing">Data Sharing and Disclosure</h2>
+  <p>WildScape does not sell or rent your personal data under any circumstances.</p>
+  <p>Trusted service providers are used to support operations such as payment, hosting, and marketing with strict data protection agreements.</p>
+  <p>Data may be disclosed when legally required or necessary for legal processes.</p>
+  <p>Information may be shared to protect rights, property, or safety of WildScape and others.</p>
+  <p>Third parties receiving data must comply with our privacy and security standards.</p>
+  <p>Cross-border transfers of data are safeguarded with appropriate legal mechanisms.</p>
+  <p>We never share information for advertising without explicit permission.</p>
+  <p>Regular audits are conducted to monitor compliance by partners.</p>
+  <p>We commit to guard your data from misuse throughout all sharing activities.</p>
+  <p>Partnerships are governed to ensure your privacy rights are always respected.</p>
+</section>
+
+<section class="container" aria-labelledby="security-measures">
+  <h2 id="security-measures">Security of Your Information</h2>
+  <p>WildScape implements robust security controls to protect information from unauthorized access or breach.</p>
+  <p>Encryption, firewalls, and access restrictions guard data at rest and in transit.</p>
+  <p>Only authorized personnel with a legitimate need have access to personal information.</p>
+  <p>Security audits and monitoring help detect and respond to vulnerabilities or attacks.</p>
+  <p>In case of data breaches, we follow established protocols including notifying affected users as required.</p>
+  <p>Account holders should use secure credentials and report suspicious activity immediately.</p>
+  <p>Our security measures are continuously updated to address evolving threats.</p>
+  <p>Physical security at data centers prevents unauthorized onsite data access.</p>
+  <p>Employee training and awareness reinforce data protection culture.</p>
+  <p>Your safety and privacy are foundational commitments in all future investments.</p>
+</section>
+
+<section class="container" aria-labelledby="cookies">
+  <h2 id="cookies">Cookies and Tracking Technologies</h2>
+  <p>WildScape uses cookies and similar technologies to enhance website functionality and user experience.</p>
+  <p>Cookies help remember preferences, authenticate users, and measure performance.</p>
+  <p>Both first-party and third-party cookies are used, with third parties for analytics and marketing only with consent.</p>
+  <p>Users can control cookie preferences through browser settings and opt-out mechanisms provided.</p>
+  <p>Disabling cookies may limit website functionality and features.</p>
+  <p>We do not use cookies to collect sensitive data without clear consent.</p>
+  <p>Cookie policies comply with applicable global regulations.</p>
+  <p>Information about cookies and usage is disclosed and regularly updated to users.</p>
+  <p>Opt-in mechanisms for managing cookies are integrated per applicable laws.</p>
+  <p>We aim to respect your privacy and provide transparency regarding tracking technologies.</p>
+</section>
+
+<section class="container" aria-labelledby="your-rights">
+  <h2 id="your-rights">Your Privacy Rights</h2>
+  <p>You have the right to access, correct, and delete your personal data held by WildScape.</p>
+  <p>Requests to exercise your rights can be submitted through our contact channels.</p>
+  <p>WildScape will verify identity before processing requests to secure your data.</p>
+  <p>You may opt out of direct marketing and certain automated decisions unless necessary for service provision.</p>
+  <p>We facilitate data portability and limit data processing where applicable by law.</p>
+  <p>Terms for data retention and exceptions are explained transparently.</p>
+  <p>Fair processing ensures that restrictions or refusals may affect service availability.</p>
+  <p>We comply timely with requests within mandated timeframes.</p>
+  <p>If dissatisfied with our response, users can escalate complaints to supervisory authorities.</p>
+  <p>We provide assistance and support to safely exercise your privacy rights.</p>
+</section>
+
+<section class="container" aria-labelledby="children-privacy">
+  <h2 id="children-privacy">Children’s Privacy</h2>
+  <p>WildScape does not knowingly collect personal information from children under the age of 16 without parental consent.</p>
+  <p>Our services and website are designed for adult users, and parental oversight is encouraged for minors.</p>
+  <p>If we discover that personal data from a child has been collected without consent, we will promptly take steps to delete the information.</p>
+  <p>Parents or guardians may contact us to request review or removal of data related to their children.</p>
+  <p>We strive to comply with laws protecting children's online privacy globally.</p>
+  <p>Educational awareness about children and privacy rights is important to our commitment.</p>
+  <p>Child data incidents, if any, are treated with highest urgency and confidentiality.</p>
+  <p>Access to our site by minors should be supervised appropriately.</p>
+  <p>We encourage responsible digital practices that respect all users, including children.</p>
+  <p>Privacy protection remains a shared responsibility for families and service providers.</p>
+</section>
+
+<section class="container" aria-labelledby="data-retention">
+  <h2 id="data-retention">Data Retention</h2>
+  <p>WildScape retains personal information only as long as necessary to provide services and comply with legal obligations.</p>
+  <p>Data related to user accounts, communications, and transactions are kept according to predefined retention schedules.</p>
+  <p>After the retention period, data is securely deleted or anonymized to prevent identification.</p>
+  <p>Retention policies ensure compliance with applicable laws including tax, financial, and data protection regulations.</p>
+  <p>Inactive accounts may be subject to deletion after reasonable notice unless restricted by law.</p>
+  <p>Regular audits and monitoring confirm adherence to retention policies.</p>
+  <p>Backup data is maintained as necessary for disaster recovery but protected with security controls.</p>
+  <p>Users may request deletion or restriction of their data within legal limits.</p>
+  <p>Data minimization principles guide our storage and retention strategies.</p>
+  <p>Our goal is responsible data management balancing service needs and privacy.</p>
+</section>
+
+<section class="container" aria-labelledby="international-users">
+  <h2 id="international-users">Privacy for International Users</h2>
+  <p>WildScape observes international privacy standards and complies with laws regulating data transfer across borders.</p>
+  <p>We implement safeguards such as standard contractual clauses and certifications to facilitate global data flows respecting regional privacy requirements.</p>
+  <p>International users have the same rights and protections under applicable frameworks such as GDPR.</p>
+  <p>Cookies, tracking, and profiling activities are disclosed transparently regardless of location.</p>
+  <p>User consent is respected worldwide before any personal data processing.</p>
+  <p>Data transfers to countries without comparable privacy laws are governed by appropriate protections.</p>
+  <p>We monitor privacy regulations continually to maintain compliance and update policies.</p>
+  <p>Users are encouraged to exercise their data rights accessible on this policy and via our contact channels.</p>
+  <p>Effective communication ensures privacy commitments are upheld across borders.</p>
+  <p>Collaboration with international partners respects privacy at all stages of service delivery.</p>
+</section>
+
+<section class="container" aria-labelledby="updates-to-privacy-policy">
+  <h2 id="updates-to-privacy-policy">Updates to This Privacy Policy</h2>
+  <p>WildScape reviews and modifies this policy regularly to reflect legal, operational, or technological changes.</p>
+  <p>Notifications of significant updates will be provided on this page and communicated to users as appropriate.</p>
+  <p>Users are encouraged to review this policy periodically for the latest information on privacy practices.</p>
+  <p>Continued use of our services following policy changes signifies acceptance of those changes.</p>
+  <p>We strive to keep the policy transparent, accessible, and up-to-date in alignment with our privacy commitments.</p>
+  <p>Feedback on policy changes is welcome to improve our privacy framework.</p>
+  <p>The version and date of last revision are always indicated on this page.</p>
+  <p>Our commitment extends to enhancing privacy protections in response to evolving needs and standards.</p>
+  <p>The policy supports clear understanding and trust with our users.</p>
+  <p>We maintain a high standard of privacy governance to safeguard your personal data.</p>
+</section>
+
+</main>
+<footer id="footer" role="contentinfo" aria-label="Website footer with contact and legal information">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-slogan" tabindex="0">Committed to Your Privacy & Satisfaction</div>
+      <address class="footer-contact" tabindex="0">
+        44 W 4th St, New York, NY 10012, USA<br />
+        Phone: +1 (555) 123-4567<br />
+        Email: privacy@wildscape.com
+      </address>
+    </div>
+    <div class="footer-bottom" tabindex="0">
+      &copy; 2024 WildScape. All rights reserved. | <a href="privacy.html" style="color: #ade8f4;">Privacy Policy</a> | <a href="contact.html" style="color: #ade8f4;">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.tabIndex = expanded ? -1 : 0;
+    });
+  });
+</script>
+</body>
+</html>
