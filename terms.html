@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WildScape - Terms and Conditions</title>
+<meta name="description" content="Read WildScape's extensive terms and conditions detailing your rights, responsibilities, and the legal framework when using our services and website." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-green: #2d7a2d;
+    --color-aqua: #37c8d7;
+    --color-aqua-light: #b3ebf2;
+    --color-gray-dark: #374151;
+    --color-gray: #6b7280;
+    --color-gray-light: #e5e7eb;
+    --color-white: #ffffff;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+    --max-content-width: 1200px;
+    --spacing-base: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --header-height: 64px;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gray-dark);
+    background: #f8faf9;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--color-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-green);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-green);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.3;
+  }
+  h1 { font-size: 3rem; margin-bottom: 24px; }
+  h2 { font-size: 2.25rem; margin-bottom: 24px; }
+  h3 { font-size: 1.75rem; margin-bottom: 16px; }
+  p {
+    margin-top: 0; margin-bottom: 20px;
+    color: var(--color-gray);
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-left: 1.5rem;
+  }
+  button {
+    font-family: var(--font-sans);
+    cursor: pointer;
+  }
+  .container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    width: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-green);
+    user-select: none;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  nav a {
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+  }
+  nav a:hover, nav a:focus {
+    background: var(--color-aqua-light);
+    color: var(--color-green);
+  }
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: var(--color-green);
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  }
+  .mobile-nav.show {
+    display: flex;
+  }
+  .mobile-nav a {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  @media (max-width: 767px) {
+    nav.nav-desktop { display: none; }
+    .mobile-menu-button { display: block; }
+  }
+  footer {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-slogan {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: var(--spacing-base);
+  }
+</style>
+</head>
+<body>
+<header aria-label="Primary Navigation">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" tabindex="0">WildScape</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">&#xe5d2;</button>
+    <nav role="navigation" aria-label="Main navigation" class="nav-desktop">
+     <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+<main>
+<section class="hero" role="banner" aria-label="Terms and Conditions Banner">
+  <div class="container">
+    <h1>Terms and Conditions</h1>
+    <p>Welcome to WildScape. These Terms and Conditions govern your use of our website and services. By accessing or using our platform, you agree to comply with these terms.</p>
+  </div>
+</section>
+
+<section class="container" aria-labelledby="acceptance">
+  <h2 id="acceptance">Acceptance of Terms</h2>
+  <p>By visiting WildScape's website or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions, including all policies referenced herein.</p>
+  <p>If you do not agree to these terms, you are prohibited from using or accessing our services.</p>
+  <p>These Terms constitute the entire agreement between you and WildScape regarding the use of our website and services, superseding any prior agreements.</p>
+  <p>We reserve the right to update or revise these terms at any time without prior notice, and changes will be effective immediately upon posting.</p>
+  <p>Continued use after changes signifies your acceptance of the updated terms. It is your responsibility to review these terms regularly.</p>
+  <p>Failure to comply with these Terms may result in termination of your access and legal action where appropriate.</p>
+  <p>You agree to comply with all applicable domestic and international laws and regulations governing your use of our platform.</p>
+  <p>These Terms are governed by and construed in accordance with the laws applicable to WildScape's jurisdiction.</p>
+  <p>Should any provision be found unenforceable, the remainder will continue in full force and effect.</p>
+  <p>Your use of the website constitutes acceptance of such terms and policies.</p>
+</section>
+
+<section class="container" aria-labelledby="user-conduct">
+  <h2 id="user-conduct">User Conduct and Responsibilities</h2>
+  <p>Users agree to use WildScape responsibly and lawfully, refraining from actions that may disrupt, damage or exploit our services.</p>
+  <p>Unauthorized use of our resources, including hacking, data scraping, or transmitting harmful code, is strictly prohibited.</p>
+  <p>You must not transmit any content that infringes intellectual property rights, is defamatory, or violates third party privacy.</p>
+  <p>Users shall not interfere with service operation or attempt to access non-public areas of the site.</p>
+  <p>Respectful communication is expected on any platform-hosted forums or interactive features.</p>
+  <p>Any detected misuse or abuse commits violations to these Terms and may lead to access restrictions or legal action.</p>
+  <p>The user bears sole responsibility for content submitted to WildScape and ensuring it complies with laws and these Terms.</p>
+  <p>We disclaim liability for user-generated content but reserve the right to remove prohibited material.</p>
+  <p>You agree to indemnify WildScape from claims or damages arising from your misuse or violations.</p>
+  <p>Persistent violation may result in permanent account suspension or further remedies.</p>
+</section>
+
+<section class="container" aria-labelledby="intellectual-property">
+  <h2 id="intellectual-property">Intellectual Property Rights</h2>
+  <p>All content, design, graphics, logos, and software on WildScape are protected by copyright, trademark, or other intellectual property laws, owned or licensed by WildScape or its partners.</p>
+  <p>Users may not copy, modify, distribute, or create derivative works from any materials without explicit written permission.</p>
+  <p>Unauthorized use of WildScape’s intellectual property is prohibited and may incur legal penalties.</p>
+  <p>WildScape grants no implied licenses or rights other than those expressly set forth in these Terms.</p>
+  <p>Intellectual property rights contributed by users remain with the user but are licensed to WildScape to use for providing services.</p>
+  <p>Trademarked names and logos may not be used in ways that imply endorsement without approval.</p>
+  <p>Users are encouraged to report unauthorized use of our intellectual property.</p>
+  <p>All proprietary rights are reserved to WildScape and its licensors without limitation.</p>
+  <p>We defend our intellectual property vigorously to protect our brand, customers, and assets.</p>
+  <p>Respect of these rights ensures sustainability and innovation continuance for WildScape’s services.</p>
+</section>
+
+<section class="container" aria-labelledby="limitations">
+  <h2 id="limitations">Limitations of Liability</h2>
+  <p>WildScape provides our services "as is" without warranties or guarantees of any kind, whether express or implied.</p>
+  <p>We do not warrant that the service will be error-free, uninterrupted, or free of harmful components.</p>
+  <p>To the extent permitted by law, WildScape shall not be liable for damages arising from the use or inability to use our services.</p>
+  <p>This includes direct, indirect, incidental, punitive, or consequential damages, including loss of profits or data.</p>
+  <p>Users acknowledge and agree that they use our site and services at their own risk.</p>
+  <p>WildScape is not liable for any unauthorized access or security breaches beyond our reasonable control.</p>
+  <p>We disclaim responsibility for third-party content, links, or advertisements featured on our website.</p>
+  <p>Limitations outlined are subject to applicable laws, which may vary by jurisdiction.</p>
+  <p>Your remedies against WildScape in any claim or dispute shall be limited to direct damages and capped accordingly.</p>
+  <p>These limitations are essential to maintain the viability of our services and offerings.</p>
+</section>
+
+<section class="container" aria-labelledby="termination">
+  <h2 id="termination">Termination and Suspension</h2>
+  <p>WildScape reserves the right to suspend or terminate access to our services at our discretion for violations of these Terms or laws.</p>
+  <p>Termination may be immediate and without prior notice if misuse or illegal activities are detected.</p>
+  <p>Termination does not release users from obligations accrued prior to suspension or deletion.</p>
+  <p>Suspended users must seek reinstatement by addressing the cause of suspension and complying with our policies.</p>
+  <p>We may also remove user-generated content violating policy guidelines.</p>
+  <p>Any termination action is final, but we may restore access upon successful appeal or remediation.</p>
+  <p>We retain rights to pursue legal action in cases of severe misconduct.</p>
+  <p>User accounts inactive for extended periods may be deleted following notification.</p>
+  <p>Terminations do not affect WildScape’s rights under law or contract for damages or compliance enforcement.</p>
+  <p>Maintaining a safe and trustworthy community is paramount to WildScape’s mission.</p>
+</section>
+
+<section class="container" aria-labelledby="governing-law">
+  <h2 id="governing-law">Governing Law and Dispute Resolution</h2>
+  <p>These Terms shall be governed by laws of the state where WildScape is headquartered, without regard to conflicts of law principles.</p>
+  <p>Users agree to resolve disputes primarily through negotiation and mediation before seeking legal remedies.</p>
+  <p>Jurisdiction and venue for any litigation is exclusively held within applicable courts of WildScape’s jurisdiction.</p>
+  <p>Disputes shall be conducted in the English language.</p>
+  <p>If any provision is found void or unenforceable, remaining provisions shall continue in effect.</p>
+  <p>We seek to resolve all disagreements fairly and efficiently to preserve our customer relationships.</p>
+  <p>This policy does not prohibit users from seeking injunctive relief if necessary.</p>
+  <p>International users agree to these terms upon use, subject to local laws where permitted.</p>
+  <p>Compliance with these laws ensures protection and legitimacy of our services.</p>
+  <p>All parties commit to ethics and good faith in all communications and claims.</p>
+</section>
+
+<section class="container" aria-labelledby="user-content">
+  <h2 id="user-content">User-Generated Content</h2>
+  <p>Users submitting content to WildScape retain ownership but grant us a worldwide license to use, display, and distribute such content.</p>
+  <p>Content must comply with laws, respect third-party rights, and not contain harmful or illegal material.</p>
+  <p>WildScape reserves the right to remove or disable content deemed inappropriate or violating these Terms.</p>
+  <p>By submitting content, users represent that they have all necessary rights and permissions.</p>
+  <p>We are not responsible for user content but may moderate to maintain community standards.</p>
+  <p>Users agree to indemnify WildScape from claims arising from their posted content.</p>
+  <p>Respectful and lawful participation fosters a safe environment for all.</p>
+  <p>We encourage reporting of abusive or infringing content.</p>
+  <p>Content retention policies apply to user-submitted materials.</p>
+  <p>Our platform is built on mutual respect and trust between users and WildScape.</p>
+</section>
+
+<section class="container" aria-labelledby="modifications">
+  <h2 id="modifications">Modifications to Services</h2>
+  <p>WildScape reserves the right to modify, suspend, or discontinue any service at any time without prior notice.</p>
+  <p>We may update features, terms, and policies to enhance security, compliance, and user experience.</p>
+  <p>Continued use after modifications constitutes acceptance of such changes.</p>
+  <p>We strive for minimal disruption when implementing changes.</p>
+  <p>Users will be notified of significant changes through website notices or direct communication.</p>
+  <p>We are committed to innovation balanced with user convenience and trust.</p>
+  <p>Service availability may vary due to maintenance or technical reasons.</p>
+  <p>Users should regularly review terms and service status updates.</p>
+  <p>Feedback is welcomed to guide future enhancements.</p>
+  <p>Adapting to evolving technology is a core part of WildScape’s service philosophy.</p>
+</section>
+
+<section class="container" aria-labelledby="third-party-services">
+  <h2 id="third-party-services">Third-Party Services and Links</h2>
+  <p>WildScape may provide links to third-party websites or services that are not owned or controlled by us. These links are provided for your convenience only.</p>
+  <p>We have no control over, and assume no responsibility for the content, privacy policies, or practices of any third parties.</p>
+  <p>We encourage you to read the terms and privacy policies of every site or service you visit through our platform.</p>
+  <p>Use of third-party services is at your own risk, and you bear all responsibility for compliance and data protection with those providers.</p>
+  <p>WildScape does not endorse and is not liable for any damages or disputes arising from third-party interactions.</p>
+  <p>We may share anonymized data with trusted third parties for analytics or advertising purposes under strict compliance.</p>
+  <p>Third-party integrations on our platform are regularly reviewed to ensure compatibility and security.</p>
+  <p>Cross-platform user experience may depend on third-party service quality.</p>
+  <p>We aim for transparency by notifying users when navigating away from our sites.</p>
+  <p>Your privacy and safety remain a primary concern, including when interacting with affiliated services.</p>
+</section>
+
+<section class="container" aria-labelledby="payment-terms">
+  <h2 id="payment-terms">Payment Terms and Billing</h2>
+  <p>When purchasing services, you agree to provide current, complete, and accurate billing information.</p>
+  <p>Payments may be processed through secure third-party payment processors ensuring your financial data is protected.</p>
+  <p>WildScape reserves the right to suspend service for overdue accounts or failed payments.</p>
+  <p>Refunds, cancellations, or disputes will be handled in accordance with our refund policy described separately.</p>
+  <p>All fees and charges are described transparently at the time of purchase.</p>
+  <p>Taxes applicable to your jurisdiction may be added to the costs and are your responsibility to pay.</p>
+  <p>You agree to notify us immediately of any unauthorized use of your payment method.</p>
+  <p>We reserve the right to modify pricing and billing policies with prior notice.</p>
+  <p>Billing disputes will be resolved promptly after contacting our customer service team.</p>
+  <p>Payments are accepted only in designated currencies and payment methods listed on our website.</p>
+</section>
+
+<section class="container" aria-labelledby="privacy-policy">
+  <h2 id="privacy-policy">Related Privacy Policy</h2>
+  <p>Your use of WildScape is also governed by our Privacy Policy, detailing data collection, use, and protection practices.</p>
+  <p>Privacy is integral to these Terms and will always take precedence to ensure your personal data rights are upheld.</p>
+  <p>We recommend reviewing the latest version of our Privacy Policy regularly as it is updated separately.</p>
+  <p>Any conflict between these Terms and Privacy Policy will be resolved in favor of the Privacy Policy regarding data matters.</p>
+  <p>Security practices, cookies usage, user rights, and data retention policies are summarized therein.</p>
+  <p>Combined, these documents form a comprehensive legal foundation for responsible service use.</p>
+  <p>We are committed to transparency and will notify users of any material changes to either policy or terms.</p>
+  <p>Users may contact our privacy officer for clarification or concerns at any time.</p>
+  <p>The privacy policy is designed to meet the highest standards and applicable laws.</p>
+  <p>Protecting your data is not only legal compliance but our ethical obligation.</p>
+</section>
+
+<section class="container" aria-labelledby="contact-info">
+  <h2 id="contact-info">Contact Information</h2>
+  <p>If you have questions regarding these Terms or any related policies, please contact our legal or customer support departments.</p>
+  <p>Email: <a href="mailto:terms@wildscape.com">terms@wildscape.com</a></p>
+  <p>Phone: +1 (555) 123-4567</p>
+  <p>Mailing Address: 44 W 4th St, New York, NY 10012, USA</p>
+  <p>We aim to respond to all inquiries promptly and professionally.</p>
+  <p>Your feedback contributes to improving our service quality and legal transparency.</p>
+  <p>Consult our contact page for alternate communication methods and hours.</p>
+  <p>Your trust is vital to our mission and the foundation of our business.</p>
+  <p>We appreciate your engagement and encourage ongoing dialogue.</p>
+  <p>Thank you for choosing WildScape.</p>
+</section>
+
+</main>
+<footer role="contentinfo" aria-label="Website footer with contact and legal information">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-slogan" tabindex="0">Committed to Your Trust & Satisfaction</div>
+      <address class="footer-contact" tabindex="0">
+        44 W 4th St, New York, NY 10012, USA<br />
+        Phone: +1 (555) 123-4567<br />
+        Email: terms@wildscape.com
+      </address>
+    </div>
+    <div class="footer-bottom" tabindex="0">
+      &copy; 2024 WildScape. All rights reserved. | <a href="privacy.html" style="color: #ade8f4;">Privacy Policy</a> | <a href="contact.html" style="color: #ade8f4;">Contact Us</a>
+    </div>
+  </div>
+</footer>
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.tabIndex = expanded ? -1 : 0;
+    });
+  });
+</script>
+</body>
+</html>
