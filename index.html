@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WildScape - Smart Irrigation & Eco-Friendly Gardens</title>
+<meta name="description" content="WildScape - Smart irrigation and eco-friendly garden services to help you grow a greener, smarter garden." />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-green: #2d7a2d;
+    --color-aqua: #37c8d7;
+    --color-aqua-light: #b3ebf2;
+    --color-gray-dark: #374151;
+    --color-gray: #6b7280;
+    --color-gray-light: #e5e7eb;
+    --color-white: #ffffff;
+    --font-sans: 'Inter', sans-serif;
+    --border-radius: 0.75rem;
+    --max-content-width: 1200px;
+    --spacing-base: 16px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+    --header-height: 64px;
+    --animation-speed: 0.7s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: var(--font-sans);
+    color: var(--color-gray-dark);
+    background: #f8faf9;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: var(--color-aqua);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: var(--color-green);
+    outline: none;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-green);
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 1.2;
+  }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.25rem; }
+  h3 { font-size: 1.75rem; }
+  p {
+    margin-top: 0; margin-bottom: var(--spacing-base);
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+    padding-left: 1.5rem;
+  }
+  button { font-family: var(--font-sans); cursor: pointer; }
+  .container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    width: 100%;
+  }
+  header {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background: var(--color-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 0 var(--spacing-lg);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.75rem;
+    color: var(--color-green);
+    user-select: none;
+  }
+  nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  nav a {
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+  }
+  nav a:hover, nav a:focus {
+    background: var(--color-aqua-light);
+    color: var(--color-green);
+  }
+  .mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 28px;
+    color: var(--color-green);
+    cursor: pointer;
+  }
+  .mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: var(--spacing-base);
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    width: 200px;
+    border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  }
+  .mobile-nav.show {
+    display: flex;
+  }
+  .mobile-nav a {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+  }
+  .hero {
+    padding: var(--spacing-xl) 0;
+    background: linear-gradient(135deg, var(--color-aqua-light), var(--color-green));
+    color: var(--color-white);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-green);
+    background: var(--color-white);
+    padding: 14px 40px;
+    border-radius: var(--border-radius);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  .btn-primary:hover, .btn-primary:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    outline: none;
+  }
+  @keyframes water-flow {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 0; }
+  }
+  .water-flow-bg {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 40px;
+    background: linear-gradient(90deg, #26becf 0%, #70e3ff 50%, #26becf 100%);
+    background-size: 200% 100%;
+    animation: water-flow 3s linear infinite;
+    opacity: 0.4;
+  }
+  section {
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+  }
+  .card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: var(--spacing-lg);
+  }
+  .card h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-green);
+  }
+  .card p {
+    color: var(--color-gray);
+  }
+  .card img {
+    width: auto;
+    max-width: 250px;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-base);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  table.services-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+  }
+  table.services-table th,
+  table.services-table td {
+    padding: 12px 16px;
+    vertical-align: top;
+  }
+  table.services-table thead th {
+    color: var(--color-green);
+    font-weight: 700;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--color-aqua);
+    text-align: left;
+  }
+  table.services-table tbody tr {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+  }
+  table.services-table tbody tr td {
+    border-bottom: none;
+  }
+  table.services-table tbody tr:nth-child(even) {
+    background: var(--color-aqua-light);
+  }
+  table.services-table img.service-img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+  }
+  .grid-3-inline {
+    display: flex;
+    gap: var(--spacing-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .grid-3-inline article.card {
+    flex: 1 1 30%;
+    max-width: 30%;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .grid-3-inline .icon-circle {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+  }
+  .icon {
+    font-family: 'Material Icons';
+    font-size: 48px;
+    color: var(--color-aqua);
+  }
+  .icon-circle {
+    width: 72px;
+    height: 72px;
+    background: var(--color-aqua-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--spacing-base);
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  .section-header h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+  }
+  .section-header p {
+    color: var(--color-gray);
+    font-size: 1.1rem;
+  }
+  article {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+    columns: 2;
+    column-gap: var(--spacing-lg);
+  }
+  @media (max-width: 1023px) {
+    article {
+      columns: 1;
+    }
+  }
+  article p {
+    break-inside: avoid;
+    margin-bottom: var(--spacing-base);
+  }
+  article h3 {
+    break-inside: avoid;
+    margin-top: var(--spacing-lg);
+    page-break-after: avoid;
+  }
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  label {
+    font-weight: 600;
+    color: var(--color-green);
+  }
+  input[type="text"], input[type="email"], textarea {
+    font-family: var(--font-sans);
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-gray-light);
+    font-size: 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: var(--color-aqua);
+    outline: none;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    background: var(--color-green);
+    color: var(--color-white);
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  button[type="submit"]:hover, button[type="submit"]:focus {
+    background: #206920;
+    outline: none;
+  }
+  .disclaimer {
+    font-size: 0.9rem;
+    color: var(--color-gray);
+    background: var(--color-gray-light);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-base);
+    margin-top: var(--spacing-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  footer {
+    background: var(--color-green);
+    color: var(--color-white);
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  .footer-container {
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-base);
+  }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-slogan {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+  .footer-contact {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.875rem;
+    opacity: 0.9;
+    margin-top: var(--spacing-base);
+  }
+  @media (max-width: 640px) {
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+  }
+  @media (max-width: 767px) {
+    nav.nav-desktop { display: none; }
+    .mobile-menu-button { display: block; }
+    .grid-3-inline article.card {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .card img {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header aria-label="Primary Navigation">
+  <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
+    <div class="logo" tabindex="0">WildScape</div>
+    <button class="mobile-menu-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">&#xe5d2;</button>
+    <nav role="navigation" aria-label="Main navigation" class="nav-desktop">
+   <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="banner" aria-label="WildScape introductory section">
+    <div class="container">
+      <h1>Let your garden grow smarter.</h1>
+      <p>WildScape provides advanced smart irrigation solutions and eco-friendly garden designs. Discover how technology and nature work together for a greener tomorrow.</p>
+      <button class="btn-primary" onclick="document.getElementById('about-us').scrollIntoView({behavior:'smooth'})" aria-label="Learn more about WildScape">Learn More</button>
+      <div class="water-flow-bg" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section id="about-us" aria-labelledby="about-heading" class="container">
+    <div class="section-header">
+      <h2 id="about-heading">About WildScape</h2>
+      <p>We deliver smart, sustainable irrigation and garden solutions tailored for eco-conscious homes and businesses.</p>
+    </div>
+    <div class="card">
+      <img src="s1.png" alt="Illustration of a smart irrigation system installed in a garden with automatic drip lines and sensors" />
+      <p>WildScape was founded by environmental engineers and garden experts passionate about conserving water while promoting lush, healthy gardens. Our smart drip irrigation systems map your garden’s unique needs, constantly monitor soil moisture, and distribute water efficiently to every plant, reducing waste and improving growth.</p>
+      <p>Our team integrates cutting-edge moisture monitoring technology to give you real-time insights about your garden's hydration level through an intuitive app dashboard. Join thousands of satisfied customers who are transforming their green spaces with intelligent irrigation and sustainable garden practices.</p>
+      <p>At WildScape, we believe in harmonizing technology with nature. We understand the delicate balance ecosystems require and design our solutions to nurture biodiversity and environmental health. Using biodegradable materials and promoting native plant growth, we reduce the ecological footprint of your landscape.</p>
+      <p>We also focus on education, offering our customers valuable insights into water conservation, plant care, and sustainable gardening practices. Our support extends beyond installation — we are your partners in cultivating a garden that thrives year-round while remaining conscientious about resource use.</p>
+      <p>With continuous innovation, we adapt our offerings to embrace emerging green technologies, ensuring your garden remains efficient, vibrant, and resilient amid changing climate conditions.</p>
+      <img src="s2.png" alt="Smartphone screen showing live moisture monitoring app dashboard with colorful graphs and garden status" />
+      <p>WildScape combines technology with eco-friendly garden design concepts, promoting native plants, biodegradable drip components, and organic soil treatments — all curated to create vibrant gardens that support biodiversity and the local ecosystem.</p>
+      <img src="s3.png" alt="Beautiful eco-friendly garden with native plants and smart drip irrigation" />
+    </div>
+  </section>
+
+  <section id="services" aria-labelledby="services-heading" class="container">
+    <div class="section-header">
+      <h2 id="services-heading">Our Services</h2>
+      <p>Explore our comprehensive smart irrigation and eco-garden services designed to create sustainable and thriving outdoor spaces.</p>
+    </div>
+    <div class="card">
+      <table class="services-table" aria-describedby="services-description">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Smart Irrigation Installation</strong></td>
+            <td>We design and install state-of-the-art drip irrigation systems tailored to your garden's unique needs, incorporating moisture sensors and weather-adaptive controllers to optimize water usage.</td>
+            <td><img class="service-img" src="s1.png" alt="Smart irrigation system with drip lines installed in a garden" /></td>
+          </tr>
+          <tr>
+            <td><strong>Real-Time Moisture Monitoring</strong></td>
+            <td>Stay informed with our IoT moisture sensor installations that send live data to your smartphone, ensuring your plants receive the ideal hydration for healthy growth.</td>
+            <td><img class="service-img" src="s2.png" alt="Moisture monitoring dashboard displayed on mobile device" /></td>
+          </tr>
+          <tr>
+            <td><strong>Eco-Friendly Garden Design</strong></td>
+            <td>Our expert team plans and creates eco-conscious garden layouts using native plants, organic soil treatments, and sustainable materials to enhance biodiversity and reduce environmental impact.</td>
+            <td><img class="service-img" src="s3.png" alt="Eco-friendly garden landscape with native plants" /></td>
+          </tr>
+          <tr>
+            <td><strong>Maintenance & Support</strong></td>
+            <td>We provide ongoing maintenance, seasonal system calibrations, and expert support to keep your garden flourishing and your irrigation system running smoothly.</td>
+            <td><!-- No image this row --></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tips" class="container" aria-labelledby="tips-heading">
+    <div class="section-header">
+      <h2 id="tips-heading">Eco Tips for Your Garden</h2>
+      <p>Boost your garden's health while saving resources with our expert eco-conscious gardening advice.</p>
+    </div>
+    <div class="grid-3-inline" role="list">
+      <article class="card" role="listitem" tabindex="0">
+        <div class="icon-circle" aria-hidden="true"><span class="icon">eco</span></div>
+        <h3>Optimize Water Use</h3>
+        <p>Set your irrigation system to water early mornings or late evenings to minimize evaporation. Use drip irrigation instead of sprinklers for targeted watering.</p>
+        <img src="t1.png" alt="Close-up photo of water dripping from drip irrigation system tubes onto green plants" />
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <div class="icon-circle" aria-hidden="true"><span class="icon">local_florist</span></div>
+        <h3>Plant Natives</h3>
+        <p>Choose native plants that are adapted to your local climate and soil for lower water needs and better pest resistance, promoting a healthy ecosystem.</p>
+        <img src="t2.png" alt="Colorful native flowering plants blooming in a sunny garden bed" />
+      </article>
+      <article class="card" role="listitem" tabindex="0">
+        <div class="icon-circle" aria-hidden="true"><span class="icon">trash_off</span></div>
+        <h3>Compost & Mulch</h3>
+        <p>Use organic mulch and compost to retain moisture in soil, improve fertility, and reduce weed growth, decreasing the frequency of watering.</p>
+         <img src="t3.png" alt="Colorful native flowering plants blooming in a sunny garden bed" />
+      </article>
+    </div>
+  </section>
+
+  <section id="feedback" class="container" aria-labelledby="feedback-heading">
+    <div class="section-header">
+      <h2 id="feedback-heading">Customer Feedback</h2>
+      <p>Your voice helps us grow better solutions. Share your experience and suggestions.</p>
+    </div>
+    <form aria-label="Customer feedback form" id="feedback-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Share your thoughts or suggestions..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </section>
+
+  <section id="disclaimer" class="container" aria-labelledby="disclaimer-heading">
+    <div class="section-header">
+      <h2 id="disclaimer-heading">Disclaimer</h2>
+    </div>
+    <p class="disclaimer">WildScape provides educational content and services to promote eco-friendly gardening and smart irrigation. While we strive for accuracy and dependability, results can vary due to environmental conditions and user implementation. Users should consult professionals before making significant irrigation or landscape changes.</p>
+  </section>
+
+  <section id="content" class="container" aria-label="Main content articles" tabindex="0">
+    <h2 class="section-header" style="margin-bottom: var(--spacing-lg);">Expert Articles & Guides</h2>
+    <article aria-label="Smart irrigation and eco-friendly gardening articles">
+      <h3>Smart Irrigation Systems: The Future of Garden Care</h3>
+      <p>Smart irrigation techniques are transforming the way homeowners and commercial gardens manage water use. By leveraging sensor-driven technology, drip mapping, and real-time weather integration, gardeners reduce waste and nurture plants precisely. This system not only promotes a healthier landscape but also lowers water bills and supporting sustainability goals...</p>
+      <p>Using low-flow drip irrigation combined with intelligent scheduling helps maintain optimal soil moisture without waterlogging roots. WildScape offers installation and tailored consultation services to assess your garden’s specific needs and design seamless integration...</p>
+      <p>Regular maintenance and soil monitoring ensure your irrigation system remains efficient and responsive to seasonal changes. Integration with mobile apps gives complete control at your fingertips, allowing for adjustments based on weather forecasts and sensor data. Embrace the future with a garden that grows smarter and conserves more.</p>
+
+      <h3>Creating Eco-Friendly Gardens with Native Plants</h3>
+      <p>Eco-friendly gardening focuses on creating landscapes rooted in local biodiversity, reducing chemical use, and fostering community with native flora and fauna. These gardens minimize external resources and nurture sustainable, vibrant environments. Native plants are adapted to thrive with local climate and soil, significantly decreasing irrigation and fertilizer needs.</p>
+      <p>WildScape’s eco-design consultants recommend native plant selections and companion planting strategies that optimize ecosystem services like pollination and natural pest control. We guide customers through the incorporation of rain gardens, permeable pavements, and organic soil amendments to boost garden health and visual appeal.</p>
+
+      <h3>Moisture Monitoring: Keep Your Garden Balanced</h3>
+      <p>Maintaining the right soil moisture balance is critical for plant health and conserves water resources. Traditional guesswork in watering wastes water and may damage roots. WildScape’s innovative moisture monitoring sensors provide continuous feedback, connected through IoT and mobile apps, alerting you when your garden needs watering or if overwatering occurs.</p>
+      <p>Our monitoring system integrates with smart irrigation hardware to automate watering only when necessary. This technology improves plant resilience, supports water conservation, and ensures optimum growth conditions even during dry seasons or drought.</p>
+      
+      <h3>WildScape News: Industry Insights and Innovations</h3>
+      <p>Stay up to date with the latest developments in water-smart gardening and green technology. WildScape curates high-quality articles featuring new products, research breakthroughs, and community initiatives that inspire more sustainable landscapes.</p>
+      <p>Our editorial team collaborates with horticulturalists, environmental scientists, and engineers to bring you unbiased information focusing on practical applications and environmental impact.</p>
+      <p>[Extensive content placeholder: thousands of words of in-depth articles on irrigation technology, gardening tips, environmental impact, case studies, customer stories, product reviews, and eco trends...]</p>
+    </article>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" aria-label="Website contact and address information">
+  <div class="footer-container">
+    <div class="footer-top">
+      <div class="footer-slogan" tabindex="0">Increase Content Customer Satisfaction</div>
+      <address class="footer-contact" tabindex="0">
+        44 W 4th St, New York, NY 10012, USA<br />
+        Phone: (555) 123-4567<br />
+        Email: contact@wildscape.com
+      </address>
+    </div>
+    <div class="footer-bottom" tabindex="0">&copy; 2024 WildScape. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  mobileMenuButton.addEventListener('click', () => {
+    const expanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.tabIndex = expanded ? -1 : 0;
+    });
+  });
+
+  document.getElementById('feedback-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert("Thank you for your feedback! We appreciate your input and will use it to improve our services.");
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
+
